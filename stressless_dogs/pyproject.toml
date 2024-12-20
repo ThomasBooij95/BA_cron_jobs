@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ba_sd_cron"
+version = "0.1.0"
+description = "Standalone cron routines to sync apis to the datawarehouse"
+authors = ["Thomas Booij <thomas@booijanalytics.nl>"]
+license = "MIT"
+
+
+[tool.poetry.dependencies]
+python =  ">=3.8.1,<4.0"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.8"
+python-dateutil = "^2.8.2"
+
+[tool.poetry.dev-dependencies]
+pprintpp = "^0.4.0"  # Pretty printing for Python
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 2000
+exclude = [".git", "__pycache__", "build", "dist"]
+ignore = ["E203", "W503"]
